@@ -25,6 +25,8 @@ Plug 'davidhalter/jedi-vim'
 Plug 'klen/python-mode'
 " Языковой пакет 
 Plug 'sheerun/vim-polyglot'
+" Автозыкрытие скобок и т.д.
+Plug 'Townk/vim-autoclose'
 call plug#end()
 
 " Делает nvim более функциональным
@@ -50,7 +52,7 @@ set noswapfile
 inoremap jkl <ESC>
 
 " Запуск скрипта на Питоне
-map <F5> :w\|!python %<cr>
+map <F5> :w\|!python3 %<cr>
 imap <F5> <Esc><F5>
 
 " Навигация по сплитам
