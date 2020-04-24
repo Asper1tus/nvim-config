@@ -19,8 +19,11 @@ Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 " Проверка Синтаксиса
 Plug 'scrooloose/syntastic' 
-" Плагин автодополнения python
-Plug 'davidhalter/jedi-vim'
+" Асмнхронное автодополнение
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+" Автодополнение python
+Plug 'deoplete-plugins/deoplete-jedi'
 " Поддержка Python
 Plug 'klen/python-mode'
 " Языковой пакет 
@@ -86,14 +89,3 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
-
-" Jedi-vim ------------------------------
-" Работает только для python
-" К определения
-let g:jedi#goto_command = ',d'
-" Найти вхождения
-let g:jedi#usages_command = ',o'
-" Найти задания
-let g:jedi#goto_assignments_command = ',a'
-" К определению в новой вкладке
-nmap ,D :tab split<CR>:call jedi#goto()<CR>
