@@ -29,7 +29,9 @@ Plug 'klen/python-mode'
 " Языковой пакет 
 Plug 'sheerun/vim-polyglot'
 " Автозыкрытие скобок и т.д.
-Plug 'Townk/vim-autoclose'
+Plug 'Townk/vim-autoclokse'
+" Class/module browser
+Plug 'majutsushi/tagbar'   
 call plug#end()
 
 " Делает nvim более функциональным
@@ -64,14 +66,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" В нормальном режиме Ctrl+n вызывает :NERDTree
-nmap <C-n> :NERDTreeToggle<CR>
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggl
-
-let g:NERDTreeGitStatusWithFlags = 1
-let g:NERDTreeIgnore = ['^node_modules$']
-
 " Тема для **NeoVim**
 syntax on
 colorscheme onedark
@@ -89,3 +83,26 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
+" Deoplete ----------------------------------------------------
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_smart_case = 1
+
+let g:context_filetype#same_filetypes = {}
+let g:context_filetype#same_filetypes._ = '_'
+
+" TagBar ------------------------------------------------------
+map <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 0 " автофокус на Tagbar при открытии
+
+" NERDTree ----------------------------------------------------
+" Ctrl+n для вызова :NERDTree
+nmap <C-n> :NERDTreeToggle<CR>
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggl
+
+let g:NERDTreeGitStatusWithFlags = 1
+let g:NERDTreeIgnore = ['^node_modules$']
+
+
