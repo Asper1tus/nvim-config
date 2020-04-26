@@ -60,6 +60,7 @@ set noswapfile
 
 " Клавиши ----------------------------------------------------
 inoremap jkl <ESC>
+let mapleader = ","
 
 " Запуск скрипта на Питоне
 map <F5> :w\|!python3 %<cr>
@@ -118,5 +119,5 @@ let g:LanguageClient_serverCommands = {
 	\}
 
 nnoremap <F2> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> ,d :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> ,r :call LanguageClient#textDocument_rename()<CR>
+nmap <leader>d :call LanguageClient#textDocument_definition()<CR>
+nmap <leader>r :call LanguageClient#textDocument_rename()<CR>
