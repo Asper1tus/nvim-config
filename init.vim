@@ -27,9 +27,16 @@ Plug 'klen/python-mode'
 " Языковой пакет 
 Plug 'sheerun/vim-polyglot'
 " Автозыкрытие скобок и т.д.
-Plug 'Townk/vim-autoclokse'
+Plug 'Townk/vim-autoclose'
 " Class/module browser
 Plug 'majutsushi/tagbar'   
+" Дигностика кода, форматирование
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+" Комментирование
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 " Делает nvim более функциональным
@@ -85,7 +92,7 @@ let g:lightline = {
 " Deoplete ----------------------------------------------------
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
-let g:deoplete#enable_smart_case = 1
+let g:deoplete#custom#option = 1
 
 let g:context_filetype#same_filetypes = {}
 let g:context_filetype#same_filetypes._ = '_'
@@ -103,4 +110,13 @@ nmap ++ <plug>NERDCommenterToggl
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$']
 
+" LanguageClient-neovim ---------------------------------------
+set hidden
 
+let g:LanguageClient_serverCommands = {
+	\ 'python': ['pyls']
+	\}
+
+nnoremap <F2> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> ,d :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> ,r :call LanguageClient#textDocument_rename()<CR>
