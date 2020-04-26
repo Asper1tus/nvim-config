@@ -15,18 +15,18 @@ sudo snap install pyls
 
 ### Short Keys
 
--nerdtree toggle: `Ctrl + n`
--tagbar toggle `F4`
--LanguageClient context menu `F2`
--run python script `F5`
--go to definition `<leader>d`
--rename `<leader>r`
+- nerdtree toggle: `Ctrl + n`
+- tagbar toggle: `F4`
+- LanguageClient context menu: `F2`
+- run python script: `F5`
+- go to definition: `<leader>d`
+- rename: `<leader>r`
  
  **split navigation**
- -left Ctrl + h
- -down `Ctrl + j`
- -up `Ctrl + k`
- -rigth `Ctrl + l`
+ - left: Ctrl + h
+ - down: `Ctrl + j`
+ - up: `Ctrl + k`
+ - rigth: `Ctrl + l`
  
 ### Usage 
 Copy init.vim to ~/.config/nvim and run :PlugInstall in nvim.
