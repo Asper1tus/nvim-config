@@ -28,5 +28,5 @@ sudo snap install pyls
  -up `Ctrl + k`
  -rigth `Ctrl + l`
  
-###Usage 
+### Usage 
 Copy init.vim to ~/.config/nvim and run :PlugInstall in nvim.
