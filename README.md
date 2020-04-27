@@ -2,7 +2,9 @@
 
 ### NeoVim Version
 NVIM v0.4.3
-Build type: RelWithDebInfo
+
+Build type: RelWithDebInfo 
+
 LuaJIT 2.0.5
 
 ### Dependences
