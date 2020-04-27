@@ -21,9 +21,10 @@ sudo snap install pyls
 - run python script: `F5`
 - go to definition: `<leader>d`
 - rename: `<leader>r`
+- commentary `<leader>c`
  
  **split navigation**
- - left: Ctrl + h
+ - left: `Ctrl + h`
  - down: `Ctrl + j`
  - up: `Ctrl + k`
  - rigth: `Ctrl + l`
