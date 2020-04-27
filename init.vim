@@ -121,3 +121,9 @@ let g:LanguageClient_serverCommands = {
 nnoremap <F2> :call LanguageClient_contextMenu()<CR>
 nmap <leader>d :call LanguageClient#textDocument_definition()<CR>
 nmap <leader>r :call LanguageClient#textDocument_rename()<CR>
+
+" Commentary 
+nmap <leader>c <Plug>CommentaryLine
+nmap <D-/> <Plug>CommentaryLine
+xmap <leader>c <Plug>Commentary
+xmap <D-/> <Plug>Commentary
