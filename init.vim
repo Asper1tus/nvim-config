@@ -7,10 +7,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 " Дополнения для NERDTree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'scrooloose/nerdcommenter'
-" Дополнение для Git, а также иконки для NERDTree
-Plug 'airblade/vim-gitgutter'
+" Иконки для NERDTree
 Plug 'ryanoasis/vim-devicons'
+" Дополнение для Git
+Plug 'airblade/vim-gitgutter'
 " Линия статуса
 Plug 'itchyny/lightline.vim'
 " Темы
