@@ -18,8 +18,7 @@ Plug 'joshdick/onedark.vim'
 " Проверка Синтаксиса
 Plug 'scrooloose/syntastic' 
 " Асмнхронное автодополнение
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
+Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
 " Автодополнение python
 Plug 'deoplete-plugins/deoplete-jedi'
 " Поддержка Python
