@@ -29,11 +29,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Townk/vim-autoclose'
 " Class/module browser
 Plug 'majutsushi/tagbar'   
-" Дигностика кода, форматирование
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 " Комментирование
 Plug 'tpope/vim-commentary'
 call plug#end()
@@ -58,12 +53,7 @@ set shiftwidth=4
 set noswapfile
 
 " Клавиши ----------------------------------------------------
-inoremap jkl <ESC>
 let mapleader = ","
-
-" Запуск скрипта на Питоне
-map <F5> :w\|!python3 %<cr>
-imap <F5> <Esc><F5>
 
 " Навигация по сплитам
 nnoremap <C-J> <C-W><C-J>
@@ -110,16 +100,16 @@ nmap ++ <plug>NERDCommenterToggl
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$']
 
-" LanguageClient-neovim ---------------------------------------
-set hidden
+" Python-mode 
+" Запуск скрипта на Питоне
+let g:pymode_run_bind = '<F5>'
 
-let g:LanguageClient_serverCommands = {
-	\ 'python': ['pyls']
-	\}
+let g:pymode_rope = 1
+let g:pymode_rope_goto_definition_bind = '<leader>g'
+let g:pymode_rope_rename_bind = '<leader>r'
 
-nnoremap <F2> :call LanguageClient_contextMenu()<CR>
-nmap <leader>d :call LanguageClient#textDocument_definition()<CR>
-nmap <leader>r :call LanguageClient#textDocument_rename()<CR>
+let g:pymode_doc = 1
+let g:pymode_doc_bind = '<leader>d'
 
 " Commentary 
 nmap <leader>c <Plug>CommentaryLine
