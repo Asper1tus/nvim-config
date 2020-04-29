@@ -29,7 +29,6 @@ LuaJIT 2.0.5
 
 - nerdtree toggle: `Ctrl + n`
 - tagbar toggle: `F4`
-- LanguageClient context menu: `F2`
 - run python script: `F5`
 - go to definition: `<leader>g`
 - rename: `<leader>r`
