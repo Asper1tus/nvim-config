@@ -55,7 +55,18 @@ set noswapfile
 " Клавиши ----------------------------------------------------
 let mapleader = ","
 
+"Навигация по табам
+map <leader>t :tabnew<CR>
+
+map <M-l> :tabn<CR>
+imap <M-l> <ESC>:tabn<CR>
+map <M-h> :tabp<CR>
+imap <M-h> <ESC>:tabp<CR>
+
 " Навигация по сплитам
+map <leader>s :split<CR>
+map <leader>vs :vs <CR>
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
