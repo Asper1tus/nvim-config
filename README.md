@@ -1,11 +1,12 @@
 # My NeoVim config
 
 ### NeoVim Version
-NVIM v0.4.3
+NVIM v0.5.0
 
-Build type: RelWithDebInfo 
+Build type: Release
 
-LuaJIT 2.0.5
+LuaJIT 2.1.0-beta3
+
 
 **use vim-plug manage plugins**： the `init.vim` will automatic download the vim-plug
 - [fzf](https://github.com/junegunn/fzf.vim) Code and files fuzzy finder
@@ -30,16 +31,22 @@ LuaJIT 2.0.5
 - nerdtree toggle: `Ctrl + n`
 - tagbar toggle: `F4`
 - run python script: `F5`
-- go to definition: `<leader>g`
-- rename: `<leader>r`
-- open doc `<leader>d`
-- commentary `<leader>c`
+- go to definition: `,g`
+- rename: `,r`
+- open doc `,d`
+- commentary `,c`
  
- **split navigation**
+ **Split navigation**
+ - horizontal split `,s`
+ - vertical split `,vs`
  - left: `Ctrl + h`
  - down: `Ctrl + j`
  - up: `Ctrl + k`
  - rigth: `Ctrl + l`
  
+ **Tab navigation**
+ - new tab `.t`
+ - next tab `Alt + l`
+ - previous tab `Alt + h` 
 ### Usage 
 Copy init.vim to ~/.config/nvim and run :PlugInstall in nvim.
