@@ -7,12 +7,6 @@ Build type: RelWithDebInfo
 
 LuaJIT 2.0.5
 
-### Dependences
-```
-sudo apt install snapd
-sudo snap install pyls
-```
-
 **use vim-plug manage plugins**： the `init.vim` will automatic download the vim-plug
 - [fzf](https://github.com/junegunn/fzf.vim) Code and files fuzzy finder
 - [nerdtree](https://github.com/preservim/nerdtree) A tree explorer
@@ -28,7 +22,6 @@ sudo snap install pyls
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot) Language pack
 - [vim-autoclose](https://github.com/Townk/vim-autoclose) Automatically close parenthesis, etc
 - [tagbar](https://github.com/majutsushi/tagbar) Class/module browser
-- [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim) Code Diagnostics, formatting
 - [vim-commentary](https://github.com/tpope/vim-commentary) Plugin for commenting
 
 
@@ -36,10 +29,10 @@ sudo snap install pyls
 
 - nerdtree toggle: `Ctrl + n`
 - tagbar toggle: `F4`
-- LanguageClient context menu: `F2`
 - run python script: `F5`
-- go to definition: `<leader>d`
+- go to definition: `<leader>g`
 - rename: `<leader>r`
+- open doc `<leader>d`
 - commentary `<leader>c`
  
  **split navigation**
