@@ -35,6 +35,7 @@ LuaJIT 2.1.0-beta3
 - rename: `,r`
 - open doc `,d`
 - commentary `,c`
+- breakpoint `,b`
  
  **Split navigation**
  - horizontal split `,s`
