@@ -14,10 +14,10 @@ Plug 'airblade/vim-gitgutter'
 " Линия статуса
 Plug 'itchyny/lightline.vim'
 " Темы
-Plug 'joshdick/onedark.vim'
-" Проверка Синтаксиса
+Plug 'tomasiser/vim-code-dark'
+"Проверка Синтаксиса
 Plug 'scrooloose/syntastic' 
-" Асмнхронное автодополнение
+" Асинхронное автодополнение
 Plug 'Shougo/deoplete.nvim' , { 'do': ':UpdateRemotePlugins' }
 " Автодополнение python
 Plug 'deoplete-plugins/deoplete-jedi'
@@ -36,9 +36,6 @@ call plug#end()
 " Делает nvim более функциональным
 set nocompatible
 set t_Co=256
-
-" Убирает линию по центру экрана
-set fillchars+=vert:\ 
 
 " Нумерация строк
 set number
@@ -74,13 +71,13 @@ nnoremap <C-H> <C-W><C-H>
 
 " Тема для **NeoVim**
 syntax on
-colorscheme onedark
+colorscheme codedark
 
 " Линия статуса: конфигурация
 set noshowmode " Табличка --INSERT-- больше не выводится на экран
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'codedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
