@@ -15,7 +15,7 @@ LuaJIT 2.1.0-beta3
 - [vim-devicons](https://github.com/ryanoasis/vim-devicons) Icons for NERDTree
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter) Git integration
 - [lightline](https://github.com/tchyny/lightline.vim) Status line
-- [onedark](https://github.com/joshdick/onedark.vim) Theme for nvim
+- [vim-code-dark](https://github.com/tomasiser/vim-code-dark) Theme for nvim
 - [syntastic](https://github.com/scrooloose/syntastic) Syntax check
 - [deoplete](https://github.com/Shougo/deoplete.nvim) Async autocompletion
 - [deoplete-jedi](https://github.com/deoplete-plugins/deoplete-jedi) Python autocompletion
