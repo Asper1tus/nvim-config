@@ -12,10 +12,9 @@ Plug 'ryanoasis/vim-devicons'
 " Дополнение для Git
 Plug 'airblade/vim-gitgutter'
 " Линия статуса
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 " Темы
-Plug 'tomasiser/vim-code-dark'
+Plug 'joshdick/onedark.vim'
 " Проверка Синтаксиса
 Plug 'scrooloose/syntastic' 
 " Асмнхронное автодополнение
@@ -37,6 +36,9 @@ call plug#end()
 " Делает nvim более функциональным
 set nocompatible
 set t_Co=256
+
+" Убирает линию по центру экрана
+set fillchars+=vert:\ 
 
 " Нумерация строк
 set number
@@ -72,10 +74,21 @@ nnoremap <C-H> <C-W><C-H>
 
 " Тема для **NeoVim**
 syntax on
-colorscheme codedark
+colorscheme onedark
 
-" Airline -----------------------------------------------------
-let g:airline_theme = 'codedark'
+" Линия статуса: конфигурация
+set noshowmode " Табличка --INSERT-- больше не выводится на экран
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 " Deoplete ----------------------------------------------------
 let g:deoplete#enable_at_startup = 1
